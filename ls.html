@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // local storage
+        localStorage.setItem("name","rahul")
+        localStorage.setItem("id",44)
+        console.log(localStorage.getItem("name"));
+        localStorage.removeItem("name"); // name propery deleted in browser
+        // localStorage.clear(); remove the all stored data
+        console.log(localStorage.length); // 1
+
+        // object stored in localstorage
+
+        data={
+            name: "srikanth",
+            company:"wipro"
+        };
+        localStorage.setItem("details",JSON.stringify(data));
+
+        // note -  toatl object can be convert into string
+
+        data=JSON.parse(data);
+        console.log(data.company);
+
+
+        // Array stored in localstorage
+
+        localStorage.setItem("marks",JSON.stringify[90,95,90]);
+        data=JSON.parse(data);
+        data=localStorage.getItem("marks")
+
+
+
+        // seesion storage
+        sessionStorage.setItem("company","tcs");
+        console.log(sessionStorage.getItem("company"))
+    </script>
+</body>
+</html>

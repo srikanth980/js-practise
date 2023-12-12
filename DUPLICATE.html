@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+
+      // EX-1;
+
+      console.log("________________________EX-1 ( new Set method) ____________________________________");
+
+      let num = [1, 2, 3, 4, 5, 1, 2, 3, 4, 5];
+      let res = [...new Set(num)];
+      console.log(res);
+
+      // ex-2 (by using filter method);
+      console.log("________________________ ex-2  (by using filter and index method)________________");
+
+
+      let num1 = [10, 11, 12, 13, 14, 15, 11, 14, 15];
+      let du = num1.filter((item, ind) => {
+        num1.indexOf(item) === ind;
+      });
+      console.log(du);
+
+  // ex-3 (by using filter method);
+  console.log("________________________ ex-3  (for loops)________________");
+
+
+      console.log(" by using for loops");
+
+      let ranks = [100, 99, 98, 97, 96, 100, 99, 97, 96];
+
+      function unique(ranks) {
+        let uniquarr = [];
+        for (i = 0; i < ranks.length; i++) {
+          if (uniquarr.indexOf(ranks[i]) == -1) {
+            uniquarr.push(ranks[i]);
+          }
+        }
+        return uniquarr;
+      }
+
+      console.log(unique(ranks));
+
+      /// eEX-4(by USING FOR OF LOOPS);
+      console.log("________________________ ex-4  (by using fOR OF LOOPS)________________");
+
+
+
+      let id = [100, 110, 120, 130, 140, 120, 110, 130];
+
+      function emp(id) {
+        let uid = [];
+        for (ele of id) {
+          if (uid.indexOf(ele) == -1) {
+            uid.push(ele);
+          }
+        }
+        return uid;
+      }
+
+      console.log(emp(id)); // 100,110,120,130,140
+
+/// eEX-5 (by USING FOR OF LOOPS);
+console.log("________________________ EX-5 (by using fOR OF LOOPS)________________");  
+
+      let no=[1000,2000,3000,1000,2000];
+      let new1=[];
+      for(ele of no){
+        if( new1.indexOf(ele) == -1){
+            new1.push(ele)
+        }
+      }
+      console.log(new1); // 1000,2000,3000
+
+      // ex-2 
+
+      let names=["navi","shiri","nandu","navi","shiri"];
+      let one=[];
+      for(item of names){
+        if(one.indexOf(item)==-1){
+          one.push(item)
+        };
+
+      }
+      console.log(one);
+
+
+
+      console.log("________________________ ex-6 with filter and index________________");
+
+
+      let ids=[20,30,40,30,40,50,60,50,60];
+
+      let ress=ids.filter((ele,ind,arr)=>{
+       return arr.indexOf(ele) === ind
+      })
+       console.log(ress)
+
+      console.log("________________________ with forEach and include________________");
+      let empIds=[20,30,40,30,40,50,60,50,60];
+let uids=[]
+      let idss=empIds.forEach((ele)=>{ 
+        if(!uids.includes(ele)){
+          uids.push(ele)
+        }
+      });
+      console.log(uids)
+    </script>
+  </body>
+</html>
